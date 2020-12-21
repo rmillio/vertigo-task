@@ -1,0 +1,7 @@
+.Credits {
+    font-family: Lato;
+    font-size: xx-small;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+}

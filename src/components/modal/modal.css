@@ -1,0 +1,37 @@
+.ModalContainer {
+    position: absolute;
+    background-color: rgba(5, 5, 5, 0.7);
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal {
+    background-color: white;
+    border-radius: 5px;
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 500px) {
+    .Modal {
+        position: fixed;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 100%;
+    }
+}
+
+.Close {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-right: 5px;
+}
+
+.ModalImage {
+    object-fit: cover;
+    width: 100%;
+}
