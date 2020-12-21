@@ -1,37 +1,80 @@
-.ModalContainer {
-    position: absolute;
-    background-color: rgba(5, 5, 5, 0.7);
-    top: 0; right: 0; bottom: 0; left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modal-container {
+  position: absolute;
+  background-color: rgba(5, 5, 5, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  animation-name: animate-bg;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+  overflow: hidden;
 }
 
-.Modal {
-    background-color: white;
-    border-radius: 5px;
-    width: 470px;
-    display: flex;
-    flex-direction: column;
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  animation-name: slide-in-from-top;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  transition: 0.5s ease-in;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 5px;
+}
+
+.modal-image {
+  object-fit: cover;
+  width: 100%;
+}
+
+@keyframes animate-bg {
+  from {
+    background-color: rgba(5, 5, 5, 0);
+  }
+  to {
+    background-color: rgba(5, 5, 5, 0.7);
+  }
+}
+
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 500px) {
-    .Modal {
-        position: fixed;
-        top: 50%;
-        transform: translate(0, -50%);
-        width: 100%;
-    }
-}
-
-.Close {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-right: 5px;
-}
-
-.ModalImage {
-    object-fit: cover;
+  .modal {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
     width: 100%;
+  }
+
+  @keyframes slide-in-from-top {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
 }

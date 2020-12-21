@@ -1,4 +1,4 @@
-.App {
+.app {
   position: absolute;
   top: 0;
   width: 1200px;
@@ -9,13 +9,13 @@
 }
 
 @media (max-width: 1200px) {
-  .App {
+  .app {
     width: 100%;
     height: auto;
   }
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: local('Lato'), url(./fonts/Lato-Regular.ttf) format('truetype');
+  font-family: "Lato";
+  src: local("Lato"), url(./fonts/Lato-Regular.ttf) format("truetype");
 }

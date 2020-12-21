@@ -1,9 +1,5 @@
-import React from 'react';
-import './title.css';
+import React from "react";
+import "./title.css";
 export default function Title(props) {
-    return(
-        <h1 className="Title" >
-            {props.value}
-        </h1>
-    );
+  return <h1 className="title">{props.value}</h1>;
 }

@@ -1,65 +1,88 @@
-.Card {
-    background-color: white;
-    width: 100%;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.card {
+  background-color: white;
+  width: 100%;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 600px) {
-    .Card {
-        width: 360px;
-    }
+  .card {
+    width: 360px;
+  }
 }
 
-.Dot {
-    height: 10px;
-    padding-top: 15px;
+.dot {
+  height: 10px;
+  padding-top: 15px;
 }
 
-.HoveredImage {
-    margin-top: -148px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    width: 100%;
-    height: 148px;
-    background-color: black;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s ease;
+.hovered-image {
+  margin-top: -148px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  height: 148px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+  z-index: 2;
 }
 
-.Image {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    object-fit: cover;
-    object-position: 0 70%;
-    width: 100%;
-    height: 148px;
+.image {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  object-fit: cover;
+  object-position: 0 70%;
+  width: 100%;
+  height: 148px;
+  z-index: 1;
 }
 
-.HoveredImage:hover {
-    opacity: 0.7;
+.hovered-image:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.LearnMore {
-    opacity: 1;
-    background-color: black;
-    border: none;
-    outline: none;
-    color: white;
-    font-family: Lato;
-    font-size: medium;
-    font-weight: bolder;
+.learn-more {
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: Lato;
+  font-size: medium;
+  font-weight: bolder;
+  transition: 0.5s ease;
 }
 
-.Logo {
-    margin-left: 25px;
+.hovered-image:hover > .learn-more {
+  opacity: 1;
 }
 
-.TextBox {
-    margin: 0px 25px 0px 25px;
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  margin-left: 25px;
+}
+
+.text-box {
+  margin: 0px 25px 0px 25px;
+}
+
+.loading {
+  /* position: absolute; */
+  height: 148px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.text:hover {
+  text-decoration: underline;
 }
