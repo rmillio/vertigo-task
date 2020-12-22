@@ -88,6 +88,11 @@
   z-index: 0;
 }
 
+.text {
+  display: inline-block;
+  cursor: pointer;
+}
+
 .text:hover {
   text-decoration: underline;
 }
