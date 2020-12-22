@@ -4,7 +4,7 @@ import Card from "../card/card";
 import Modal from "../modal/modal";
 import { useSelector, useDispatch } from "react-redux";
 import { requestDataFromApi } from "../../actions/data";
-
+import loading from '../../images/loading.gif';
 export default function CardContainer() {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
@@ -42,5 +42,10 @@ export default function CardContainer() {
         )}
       </div>
     );
-  } else return <div></div>;
+  } else return(
+    <img
+      src={loading}
+      alt=""
+    />
+  );
 }
