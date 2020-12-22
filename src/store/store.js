@@ -1,9 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { getData } from "../api/api";
+import dataReducer from "../reducers/data";
+import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
 
-export default configureStore({
-  // Simulating a reducer
-  reducer: {
-    data: getData,
-  },
-});
+export const store = createStore(dataReducer, applyMiddleware(thunk));
