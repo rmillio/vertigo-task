@@ -11,7 +11,7 @@
 @media (max-width: 1200px) {
   .app {
     width: 100%;
-    height: auto;
+    position: unset;
   }
 }
 

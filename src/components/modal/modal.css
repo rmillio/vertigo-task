@@ -1,10 +1,10 @@
 .modal-container {
-  position: absolute;
+  position: fixed;
   background-color: rgba(5, 5, 5, 0.7);
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,5 +76,26 @@
       transform: translateY(-50%);
       opacity: 1;
     }
+  }
+}
+
+#close-icon:hover {
+  animation-timing-function: linear;
+  animation-name: wiggle;
+  animation-duration: 1s;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-5deg);
   }
 }

@@ -53,7 +53,7 @@ export default function Modal(props) {
                 closeModal();
               }}
             >
-              <RiCloseLine />
+              <RiCloseLine id="close-icon" />
             </div>
           </IconContext.Provider>
         </div>

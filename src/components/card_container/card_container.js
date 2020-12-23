@@ -4,7 +4,7 @@ import Card from "../card/card";
 import Modal from "../modal/modal";
 import { useSelector, useDispatch } from "react-redux";
 import { requestDataFromApi } from "../../actions/data";
-import loading from '../../images/loading.gif';
+import loading from "../../images/loading.gif";
 export default function CardContainer() {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
@@ -36,16 +36,25 @@ export default function CardContainer() {
     });
     return (
       <div>
-        <div className="card-container">{cards}</div>
-        {showModal && (
-          <Modal setShowModal={setShowModal} modalContent={modalContent} />
-        )}
+        <div className="card-container">
+          {cards}
+          {showModal && (
+            <Modal setShowModal={setShowModal} modalContent={modalContent} />
+          )}
+        </div>
       </div>
     );
-  } else return(
-    <img
-      src={loading}
-      alt=""
-    />
-  );
+  } else
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img src={loading} alt="" />
+      </div>
+    );
 }

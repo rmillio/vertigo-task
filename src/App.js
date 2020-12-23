@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import CardContainer from "./components/card_container/card_container";
-
 function App() {
   return (
     <div
