@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./card.css";
-import logo from "../../images/logo.png";
 import loading from "../../images/loading.gif";
 import { useSelector } from "react-redux";
 import Title from "../title/title";
@@ -13,6 +12,10 @@ export default function Card(props) {
   const cardData = data[props.id - 1];
 
   const showDetails = () => {
+    // Keep the image dark while the modal is open
+    var item = document.getElementsByClassName("card");
+    item[props.id - 1].children[1].style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+
     props.setShowModal(true);
     props.setModalContent(cardData);
   };
@@ -45,7 +48,27 @@ export default function Card(props) {
         </div>
       )}
       <div className="logo">
-        <img className="dot" src={logo} alt="logo" />
+        <svg width="70" height="40">
+          <g id="both-dots">
+            <title>Layer 1</title>
+            <ellipse
+              ry="5"
+              rx="5"
+              id="blue-dot"
+              cy="23"
+              cx="6"
+              fill="#00bcd3"
+            />
+            <ellipse
+              ry="5"
+              rx="5"
+              id="yellow-dot"
+              cy="23"
+              cx="20"
+              fill="#fec106"
+            />
+          </g>
+        </svg>
       </div>
       <div
         className="text-box"
@@ -53,7 +76,7 @@ export default function Card(props) {
           showDetails();
         }}
       >
-        <div className="text">
+        <div className="text" style={{ marginTop: -12 }}>
           <Title value={cardData.title} />
         </div>
       </div>

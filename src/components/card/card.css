@@ -49,6 +49,10 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.card:hover .hovered-image {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .learn-more {
   opacity: 0;
   background-color: transparent;
@@ -66,12 +70,18 @@
   opacity: 1;
 }
 
+.card:hover .learn-more {
+  opacity: 1;
+}
+
 .learn-more:hover {
   text-decoration: underline;
 }
 
 .logo {
+  padding: 0;
   margin-left: 25px;
+  margin-bottom: 0;
 }
 
 .text-box {
@@ -95,4 +105,44 @@
 
 .text:hover {
   text-decoration: underline;
+}
+
+.card:hover #both-dots {
+  animation: spin 0.5s linear 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 13px 23px;
+  }
+  100% {
+    transform: rotate(180deg);
+    transform-origin: 13px 23px;
+  }
+}
+
+.card:hover #blue-dot {
+  animation: change-color-blue-dot 0.5s linear 1;
+}
+.card:hover #yellow-dot {
+  animation: change-color-yellow-dot 0.5s linear 1;
+}
+
+@keyframes change-color-blue-dot {
+  0% {
+    fill: #00bcd3;
+  }
+  100% {
+    fill: #fec106;
+  }
+}
+
+@keyframes change-color-yellow-dot {
+  0% {
+    fill: #fec106;
+  }
+  100% {
+    fill: #00bcd3;
+  }
 }

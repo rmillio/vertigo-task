@@ -32,6 +32,9 @@ export default function Modal(props) {
     modalContainer.style.transition = "opacity 0.3s ease-out";
     modal.style.transform = "translateY(150%)";
     modal.style.transition = "transform 0.3s ease";
+    // Deselect the card's image
+    var item = document.getElementsByClassName("card");
+    item[props.modalContent.id - 1].children[1].removeAttribute("style");
     setTimeout(() => {
       props.setShowModal(false);
     }, 300);
