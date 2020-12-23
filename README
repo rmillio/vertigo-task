@@ -1,9 +1,10 @@
-Radu Millio. Date of last modification: 22.12.2020
+Radu Millio. Date of last modification: 23.12.2020
 
 Features:
 - everything is mobile responsive
 - smooth transition to "Learn More" overlay when hovering a card's image
-- slide-in and slide-out animations for modal + smooth background transition
+- slide-in and slide-out animations for modal
+- close(x) button can wiggle
 - modal can be closed by pressing 'X' or anywhere outside of it
 - until an image is completely loaded, render the loading gif
 - "Learn More" and the card's title are underlined when hovered to show they
