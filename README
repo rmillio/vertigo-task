@@ -2,6 +2,8 @@ https://radubackend.herokuapp.com/
 
 Radu Millio. Date of last modification: 23.12.2020
 
+Max-width of application is 1200px.
+
 Features:
 - everything is mobile responsive
 - smooth transition to "Learn More" overlay when hovering a card's image
